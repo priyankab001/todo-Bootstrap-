@@ -1,0 +1,28 @@
+
+
+{% load static %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link href="{% static 'css/list.css' %}" rel="stylesheet">
+
+
+
+
+<div class="center-column">
+<table>
+    <tr>
+            <form method="POST" action="">
+            {% csrf_token %}
+            <td>
+            {{ form }}
+                </td>
+                <td>
+            <a class="btn btn-primary" href="{% url 'list' %}">Cancel</a>
+        </td>
+                <td>
+            <input class="btn btn-danger" type="submit" name="Update Task">
+                </td>
+            </form>
+
+    </tr>
+</table>
+</div>
